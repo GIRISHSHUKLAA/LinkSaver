@@ -20,7 +20,7 @@ tabBtn.addEventListener("click", function () {
   // Query active tab from Chrome
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     // Push the URL of the active tab to myLeads array
-    myLeads.push(tabs[0].url);
+    myLeads.push(tabs[0].title);
     // Save myLeads array to local storage
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
     // Render the updated leads on the UI
